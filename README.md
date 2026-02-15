@@ -8,10 +8,10 @@ This repository contains the source code for my personal portfolio website. Buil
 The goal of this project was to build a responsive, type-safe, and interactive platform to present my work. It features a clean UI, smooth transitions, and a modular architecture.
 
 ## Technical Stack
-* **Core:** React 18, TypeScript
-* **Styling:** Material UI (MUI), Emotion
+* **Core:** React, TypeScript
+* **Styling:** Material UI (MUI)
 * **Animations:** Framer Motion
-* **Routing:** React Router DOM
+* **Routing:** React Router
 * **Deployment:** GitHub Pages
 
 ## Key Features
