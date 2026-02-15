@@ -1,6 +1,6 @@
-# Modern Developer Portfolio
+# Portfolio
 
-**Live Demo:** [zarathmgd.github.io/portfolio](https://zarathmgd.github.io/portfolio/)
+**Link:** [zarathmgd.github.io/portfolio](https://zarathmgd.github.io/portfolio/)
 
 This repository contains the source code for my personal portfolio website. Built with **React** and **TypeScript**, it serves as a digital resume to showcase my skills and projects in Data Engineering and Software Development.
 
