@@ -70,14 +70,13 @@ export default function About() {
         </Typography>
         <AboutContent
           title={"Who am i ?"}
-          textOne={"I'm a 19 years old self-taught student in IT. I live in France, near Paris"}
-          textTwo={"I go to the gym to work on my physique and I love cooking healthy and tasty meals."}
+          textOne={"Hi, I'm Zarath Mougamadou.\nFinancial Planning & Reporting Apprentice at Disneyland Paris."}
+          textTwo={"Based in Paris, I bridge the gap between raw data and business insights.\nCurrently building data solutions at Disneyland Paris."}
         />
         <AboutContent
           title={"What I do ?"}
-          textOne={
-            "I learnt web development with online courses by starting with HTML, CSS and Javascript. After that, I learnt about Typescript, React & MUI. Having an interest in digital, I continued with graphic design. I now want to train in data and digital marketing in order to have a versatile profile to become a project manager."
-          }
+          textOne={"I started my journey with web development, which taught me the importance of clean code and logic. However, my apprenticeship at Disneyland Paris introduced me to the world of Data."}
+          textTwo={"Working on financial data flows made me realize that I want to specialize in Data Engineering. I am currently building my skills in Python, SQL, and ETL processes to prepare for my future career."}
         />
       </Box>
       <Box
@@ -135,7 +134,7 @@ export default function About() {
                     width: "110px",
                     borderColor: "primary.main",
                     fontSize: ".7rem",
-                    ":hover": { backgroundColor: "primary.hover" },
+                    ":hover": { backgroundColor: "primary.hover", cursor: "default" },
                   }}
                 >
                   {name}

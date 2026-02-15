@@ -1,9 +1,17 @@
 import { Box, Typography, Button, Link, Grid } from "@mui/material";
-import { AppContext, IProject } from "../Context";
-import { useContext } from "react";
+import { IProject } from "../Context";
 
-export default function projectContent({ projectName, projectInformations, elementClassName, link }: IProject) {
-  const { skills } = useContext(AppContext);
+interface ProjectContentProps extends IProject {
+  tags: string[];
+}
+
+export default function ProjectContent({ 
+  projectName, 
+  projectInformations, 
+  elementClassName, 
+  link, 
+  tags 
+}: ProjectContentProps) {
 
   return (
     <Box
@@ -15,14 +23,16 @@ export default function projectContent({ projectName, projectInformations, eleme
         rowGap: { xs: "20px", md: 0 },
       }}
     >
-      <Box sx={{ width: "200px", height: "200px", backgroundColor: "primary.main", borderRadius: "4px" }}>
-        <img src="" alt="" />
+      <Box sx={{ width: "200px", height: "200px", backgroundColor: "primary.main", borderRadius: "4px", flexShrink: 0 }}>
+        <img src="" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       </Box>
+
       <Box
         className="informations-container"
         sx={{
           maxWidth: "575px",
-          height: { xs: "auto", md: "175px" },
+          height: { xs: "auto", md: "auto" },
+          minHeight: { md: "175px" },
           border: "1px solid",
           borderLeft: !elementClassName ? { xs: "1px solid", md: "none" } : "1px solid",
           borderRight: !elementClassName ? "1px solid" : { xs: "1px solid", md: "none" },
@@ -44,33 +54,38 @@ export default function projectContent({ projectName, projectInformations, eleme
           <Typography variant="h3" sx={{ fontSize: "1.3rem", fontWeight: 500 }}>
             {projectName}
           </Typography>
-          <Link href={link} target="_blank">
-            <i className="fa-solid fa-arrow-up-right-from-square"></i>
-          </Link>
+          {link && (
+            <Link href={link} target="_blank" rel="noopener noreferrer">
+                <i className="fa-solid fa-arrow-up-right-from-square" style={{ cursor: 'pointer', color: 'inherit' }}></i>
+            </Link>
+          )}
         </Box>
-        <Typography variant="body2">{projectInformations}</Typography>
-        <Grid container columnGap={3} rowGap={1} sx={{ marginTop: 1, justifyContent: { xs: "center", md: "start" } }}>
-          {skills.map(({ id, name }) => {
-            if (["React", "Typescript", "CSS", "Figma"].includes(name)) {
-              return (
-                <Grid item key={id}>
-                  <Button
-                    variant="outlined"
-                    sx={{
-                      width: "90px",
-                      p: 0.1,
-                      borderColor: "primary.main",
-                      fontSize: ".7rem",
-                      cursor: "default",
-                      ":hover": { backgroundColor: "primary.hover" },
-                    }}
-                  >
-                    {name}
-                  </Button>
-                </Grid>
-              );
-            }
-          })}
+        
+        <Typography variant="body2" sx={{ whiteSpace: "pre-line" }}>
+            {projectInformations}
+        </Typography>
+
+        <Grid container columnGap={1} rowGap={1} sx={{ marginTop: 2, justifyContent: { xs: "center", md: "start" } }}>
+          {tags && tags.map((tagName, index) => (
+            <Grid item key={index}>
+              <Button
+                variant="outlined"
+                sx={{
+                  minWidth: "auto",
+                  px: 1,
+                  py: 0.1,
+                  borderColor: "primary.main",
+                  fontSize: ".7rem",
+                  cursor: "default",
+                  color: "text.primary",
+                  textTransform: "none",
+                  ":hover": { backgroundColor: "rgba(25, 118, 210, 0.1)" },
+                }}
+              >
+                {tagName}
+              </Button>
+            </Grid>
+          ))}
         </Grid>
       </Box>
     </Box>

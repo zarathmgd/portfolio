@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import React, { createContext, useState } from "react";
 
 interface IContext {
   mode: boolean;
@@ -8,8 +8,8 @@ interface IContext {
 
 export interface IAbout {
   title: string;
-  textOne: string;
-  textTwo?: string;
+  textOne: string | React.ReactNode;
+  textTwo?: string | React.ReactNode;
 }
 
 export interface IProject {
@@ -17,6 +17,7 @@ export interface IProject {
   projectInformations: string;
   elementClassName?: string;
   link: string;
+  tags?: string[]
 }
 
 const defaultState = {
@@ -31,14 +32,16 @@ export function Context({ children }: any) {
   const [mode, setMode] = useState<boolean>(false);
 
   const skills: { id: number; name: string }[] = [
-    { id: 0, name: "HTML" },
-    { id: 1, name: "CSS" },
-    { id: 2, name: "Javascript" },
-    { id: 3, name: "Typescript" },
-    { id: 4, name: "React" },
-    { id: 5, name: "Redux" },
-    { id: 6, name: "Material UI" },
-    { id: 7, name: "Figma" },
+    { id: 0, name: "Python" },
+    { id: 1, name: "SQL" },
+    { id: 2, name: "Knime" },
+    { id: 3, name: "Power BI" },
+    { id: 4, name: "UiPath" },
+    { id: 5, name: "Excel" },
+    { id: 6, name: "PowerQuery" },
+    { id: 7, name: "Git / Github" },
+    { id: 8, name: "React" },
+    { id: 9, name: "Typescript" }
   ];
 
   return <AppContext.Provider value={{ mode, setMode, skills }}> {children} </AppContext.Provider>;
