@@ -69,9 +69,7 @@ export default function Project() {
 
         <ProjectContent
           projectName="Weather Data ETL & BI Pipeline"
-          projectInformations={`End-to-end Data Engineering project designed to optimize retail logistics based on European weather trends.
-          I built an automated pipeline extracting data from the Open-Meteo API, transforming it with Python, and loading it into a containerized PostgreSQL warehouse (Docker).
-          The final output is a Power BI dashboard enabling strategic decision-making for inventory management.`}
+          projectInformations={"Automated ELT pipeline extracting weather data (Open-Meteo API) into a containerized PostgreSQL warehouse. Built for retail logistics optimization with a dedicated Power BI strategic dashboard."}
           link={"https://github.com/zarathmgd/weather-data-pipeline"} 
           tags={["Python", "SQL", "Docker", "Power BI"]}
         />
