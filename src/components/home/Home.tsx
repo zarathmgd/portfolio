@@ -46,7 +46,12 @@ export default function Home() {
               <Typography variant="h1">Zarath Mougamadou</Typography>
             </Box>
             <Typography variant="body2">
+<<<<<<< HEAD
               Etudiant en BTS SIO option SLAM et alternant au sein de Disneyland Paris. <br /> Voici mon portfolio. <br />
+=======
+              22 years old french student in IT. <br /> I want to become a Data Engineer. <br /> Here is my
+              portfolio, enjoy !
+>>>>>>> 73c7f8e79658ac2e4ee0ecab7c1f8a3ec8a12650
             </Typography>
             <Button
               variant="outlined"

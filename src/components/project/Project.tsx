@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useRef, useEffect, useState } from "react";
 import { Box, Typography, Grid, Button } from "@mui/material";
+=======
+import { Box, Typography, Button } from "@mui/material";
+import ProjectContent from "./ProjectContent";
+>>>>>>> 73c7f8e79658ac2e4ee0ecab7c1f8a3ec8a12650
 import { motion, useAnimation, useInView } from "framer-motion";
 import ProjectContent from "./ProjectContent";
 
@@ -87,6 +92,7 @@ export default function Project() {
     }
   }, [isInView]);
 
+<<<<<<< HEAD
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   };
@@ -100,6 +106,8 @@ export default function Project() {
       ? projects
       : projects.filter((project) => project.category === filter);
 
+=======
+>>>>>>> 73c7f8e79658ac2e4ee0ecab7c1f8a3ec8a12650
   return (
     <Box
       ref={ref}
@@ -117,6 +125,7 @@ export default function Project() {
         flexDirection: "column",
         alignItems: "center",
         marginTop: { xs: "125px", md: "150px" },
+        marginBottom: "100px",
       }}
     >
       <Box
@@ -127,7 +136,7 @@ export default function Project() {
           display: "flex",
           flexDirection: "column",
           alignItems: { xs: "center", md: "start" },
-          rowGap: "40px",
+          rowGap: "60px",
           position: "relative",
         }}
       >
@@ -136,18 +145,24 @@ export default function Project() {
           id="project"
           sx={{
             position: "relative",
+<<<<<<< HEAD
+=======
+            alignSelf: "center",
+            marginBottom: "20px",
+>>>>>>> 73c7f8e79658ac2e4ee0ecab7c1f8a3ec8a12650
             "::after": {
               content: "''",
               position: "absolute",
-              left: { xs: "50%", md: 0 },
-              transform: { xs: "translateX(-50%)", md: "none" },
+              left: "50%",
+              transform: "translateX(-50%)",
               bottom: -10,
-              width: "40%",
+              width: "60px",
               height: "3px",
               backgroundColor: "primary.main",
             },
           }}
         >
+<<<<<<< HEAD
           Projets
         </Typography>
         <Typography variant="h3">Quelles sont mes réalisations ?</Typography>
@@ -219,6 +234,56 @@ export default function Project() {
             ))}
           </Grid>
         </Box>
+=======
+          Selected Projects
+        </Typography>
+
+        <ProjectContent
+          projectName="Weather Data ETL & BI Pipeline"
+          projectInformations={"Automated ELT pipeline extracting weather data (Open-Meteo API) into a containerized PostgreSQL warehouse. Built for retail logistics optimization with a dedicated Power BI strategic dashboard."}
+          link={"https://github.com/zarathmgd/weather-data-pipeline"} 
+          tags={["Python", "SQL", "Docker", "Power BI"]}
+        />
+
+        <ProjectContent
+          projectName="Messaging System (School Project)"
+          projectInformations="Academic PHP/SQL chat app featuring user authentication and automated data archiving. I implemented SQL Triggers to ensure full traceability of deleted messages."
+          elementClassName="chatbox project"
+          link={"https://github.com/zarathmgd/chatbox"} 
+          tags={["PHP", "MySQL", "HTML", "CSS"]}
+        />
+
+        <ProjectContent
+          projectName="Personal Web App"
+          projectInformations="Developed a fully responsive Single Page Application using React & TypeScript. Implemented clean architecture patterns, custom hooks for logic reuse, and optimized rendering performance with Framer Motion."
+          link={"https://github.com/zarathmgd/portfolio"} 
+          tags={["React", "TypeScript", "MUI", "Framer Motion"]}
+        />
+
+        <Box sx={{ width: "100%", display: "flex", justifyContent: "center", mt: 4 }}>
+            <Button 
+                variant="outlined" 
+                size="large"
+                href="https://github.com/zarathmgd?tab=repositories" 
+                target="_blank"
+                sx={{
+                    padding: "10px 30px",
+                    color: "text.primary",
+                    borderColor: "primary.main",
+                    textTransform: "uppercase",
+                    letterSpacing: "1px",
+                    ":hover": {
+                        backgroundColor: "rgba(25, 118, 210, 0.1)",
+                        borderColor: "primary.main"
+                    }
+                }}
+            >
+                <i className="fa-brands fa-github" style={{ marginRight: "10px", fontSize: "1.2rem" }}></i>
+                See more on GitHub
+            </Button>
+        </Box>
+
+>>>>>>> 73c7f8e79658ac2e4ee0ecab7c1f8a3ec8a12650
       </Box>
     </Box>
   );

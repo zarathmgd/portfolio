@@ -71,6 +71,7 @@ export default function About() {
           A propos de moi
         </Typography>
         <AboutContent
+<<<<<<< HEAD
           title={"Qui suis-je ?"}
           textOne={"Je suis étudiant en BTS SIO option SLAM, alternant au sein de Disneyland Paris en tant qu'apprenti Financial Planning & Reporting."}
           textTwo={"A l'issue de ce BTS, je souhaite poursuivre mes études afin de me spécialiser dans le domaine de la data."}
@@ -96,6 +97,16 @@ export default function About() {
           textTwo={"En parallèle, je développe et optimise des solutions pour améliorer les processus existants. J'utilise principalement Excel et SQL pour extraire et analyser des données, et je crée des tableaux de bord sur Power BI pour mesurer les performances des systèmes financiers comme SAP BW. J'ai également développé des outils avec Power Query pour faciliter les tests et automatiser les traitements de données, réduisant ainsi les manipulations manuelles et les risques d'erreurs."}
           textThree={"Par exemple, durant la première année de mon contrat, j'ai mis en place un ETL sur Knime pour automatiser le traitement du budget annuel, simplifiant ainsi un processus auparavant complexe et sujet aux erreurs. Mon rôle consiste à apporter des solutions efficaces et innovantes pour optimiser les opérations financières de l'entreprise."}
   
+=======
+          title={"Who am i ?"}
+          textOne={"Hi, I'm Zarath Mougamadou.\nFinancial Planning & Reporting Apprentice at Disneyland Paris."}
+          textTwo={"Based in Paris, I bridge the gap between raw data and business insights.\nCurrently building data solutions at Disneyland Paris."}
+        />
+        <AboutContent
+          title={"What I do ?"}
+          textOne={"I started my journey with web development, which taught me the importance of clean code and logic. However, my apprenticeship at Disneyland Paris introduced me to the world of Data."}
+          textTwo={"Working on financial data flows made me realize that I want to specialize in Data Engineering. I am currently building my skills in Python, SQL, and ETL processes to prepare for my future career."}
+>>>>>>> 73c7f8e79658ac2e4ee0ecab7c1f8a3ec8a12650
         />
       </Box>
       <Box
@@ -153,7 +164,7 @@ export default function About() {
                     width: "110px",
                     borderColor: "primary.main",
                     fontSize: ".7rem",
-                    ":hover": { backgroundColor: "primary.hover" },
+                    ":hover": { backgroundColor: "primary.hover", cursor: "default" },
                   }}
                 >
                   {name}
